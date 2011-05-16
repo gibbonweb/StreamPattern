@@ -5,7 +5,7 @@
 
 [general]
 app_url = "http://localhost/path/to/app"
-site_title = "Example Blog"
+site_title = "StreamPattern"
 
 [cache]
 engine = "No"
@@ -15,13 +15,13 @@ engine = "MysqlPDO"
 host = "localhost"
 port = 3306
 socket = 
-database = "hydrogenapp"
-username = "hydrogenapp"
+database = "streampatternapp"
+username = "streampatternapp"
 password = "password"
-table_prefix = "hydro_"
+table_prefix = "sp_"
 
 [recache]
-unique_name = 'XYZ'
+unique_name = 'StreamPattern'
 
 [semaphore]
 engine = "No"
