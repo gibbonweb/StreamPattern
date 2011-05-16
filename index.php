@@ -1,6 +1,7 @@
 <?php
 /*
- * Copyright (c) 2011, Frosted Design
+ * Copyright (c) 2011, Johannes Becker
+ * Based on Hydrogen-MVC-Starter by Tom Frost
  * All rights reserved.
  *
  * ******
@@ -28,7 +29,7 @@
  * 		caching is turned off by default.  That would be bad in production!
  */
 
-require_once(__DIR__ . '/lib/myapp/myapp.inc.php');
+require_once(__DIR__ . '/lib/streampattern/streampattern.inc.php');
 use hydrogen\controller\Dispatcher;
 use hydrogen\errorhandler\ErrorHandler;
 
@@ -40,9 +41,9 @@ use hydrogen\errorhandler\ErrorHandler;
 
 // The following rules determine which controller is executed depending on
 // the URL that was requested.  See the Dispatcher documentation for details.
-Dispatcher::addHomeMatchRule('\myapp\controllers\IndexController', 'index');
-Dispatcher::addPathInfoAutoMapRule('\myapp\controllers', 'Controller');
-Dispatcher::addMatchAllRule('\myapp\controllers\ErrorController', 'error404');
+Dispatcher::addHomeMatchRule('\streampattern\controllers\IndexController', 'index');
+Dispatcher::addPathInfoAutoMapRule('\streampattern\controllers', 'Controller');
+Dispatcher::addMatchAllRule('\streampattern\controllers\ErrorController', 'error404');
 
 // Now that the rules are set up, this line will tell the Dispatcher to load
 // up the correct controller!  That's it-- index.php is done, and the
