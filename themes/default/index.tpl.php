@@ -8,19 +8,19 @@
 {% endblock %}
 
 {% block content %}
-	{% for post in posts %}
+	{% for item in items %}
 		<div class="article">
-			<a href="{% url index.php/article/view post.id post.title|slugify %}" class="post-title">
-				{{post.title}}
+			<a href="{% url index.php/article/view item.id item.title|slugify %}" class="item-title">
+				{{item.title}}
 			</a>
-			<span class="post-info">
-				Posted {{post.timestamp}} by {{post.author}}.
+			<span class="item-info">
+				Posted {{item.published}} by {{item.author.name}}.
 			</span>
-			<div class="post-content">
-				{{post.body}}
+			<div class="item-content">
+				{{item.body}}
 			</div>
 		</div>
 	{% empty %}
-		<span class="badnews">There are no posts!</span>
+		<span class="badnews">There are no items!</span>
 	{% endfor %}
 {% endblock %}
