@@ -7,6 +7,7 @@
 namespace streampattern\models;
 
 use hydrogen\model\Model;
+use streampattern\sqlbeans\ItemBean;
 
 class ArticleModel extends Model {
 	
@@ -25,7 +26,10 @@ class ArticleModel extends Model {
 		// access an SQLBean here to get results from the database,
 		// but since this is more of a template for doing your own
 		// thing, we'll just return sample data.
-		return array(
+                $items = ItemBean::select();
+                //die(var_dump($items));
+                return $items;
+                /*return array(
 			array(
 				'id' => 2,
 				'title' => 'I\'m back!',
@@ -40,7 +44,7 @@ class ArticleModel extends Model {
 				'timestamp' => '11 Jan 2011 9:35am GMT-5',
 				'body' => 'This is my first post on a totally fake blog!'
 			)
-		);
+		);*/
 	}
 	
 	/**
