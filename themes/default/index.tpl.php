@@ -24,3 +24,4 @@
 		<span class="badnews">There are no items!</span>
 	{% endfor %}
 {% endblock %}
+
