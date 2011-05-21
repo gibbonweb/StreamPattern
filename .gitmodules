@@ -1,3 +1,6 @@
 [submodule "lib/hydrogen"]
 	path = lib/hydrogen
 	url = git://github.com/TomFrost/Hydrogen.git
+[submodule "lib/simplepie"]
+	path = lib/simplepie
+	url = https://github.com/simplepie/simplepie.git
