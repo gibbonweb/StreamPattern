@@ -22,29 +22,8 @@ class ArticleModel extends Model {
 	 * all the index pages to update right away.
 	 */
 	public function getSummary__600_summaries($start, $perPage) {
-		// Normally we'd either create a new Query object or
-		// access an SQLBean here to get results from the database,
-		// but since this is more of a template for doing your own
-		// thing, we'll just return sample data.
-                $items = ItemBean::select(false, true);
-                //die(var_dump($items));
-                return $items;
-                /*return array(
-			array(
-				'id' => 2,
-				'title' => 'I\'m back!',
-				'author' => 'Talented Hydrogen Developer',
-				'timestamp' => '24 Jan 2011 7:55pm GMT-5',
-				'body' => 'Time for another post!'
-			),
-			array(
-				'id' => 1,
-				'title' => 'Hello, world!',
-				'author' => 'Talented Hydrogen Developer',
-				'timestamp' => '11 Jan 2011 9:35am GMT-5',
-				'body' => 'This is my first post on a totally fake blog!'
-			)
-		);*/
+        $items = ItemBean::select(false, true);
+        return $items;
 	}
 	
 	/**
