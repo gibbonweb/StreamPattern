@@ -20,7 +20,7 @@ class ItemBean extends SQLBean {
     protected static $primaryKeyIsAutoIncrement = true;
     protected static $fields = array('id', 'published', 'title', 'body', 'visible');
     protected static $beanMap = array(
-        'group' => array(
+        'author' => array(
             'joinType' => 'LEFT',
             'joinBean' => 'streampattern\sqlbeans\AuthorBean',
             'foreignKey' => 'author_id')

@@ -26,7 +26,7 @@ class ArticleModel extends Model {
 		// access an SQLBean here to get results from the database,
 		// but since this is more of a template for doing your own
 		// thing, we'll just return sample data.
-                $items = ItemBean::select();
+                $items = ItemBean::select(false, true);
                 //die(var_dump($items));
                 return $items;
                 /*return array(

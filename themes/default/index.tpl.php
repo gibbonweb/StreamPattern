@@ -4,7 +4,7 @@
 
 {% block sidebar %}
 	{% parentblock %}
-	<p>This blog has all of {{posts|length}} post{{posts|pluralize}}.</p>
+	<p>This blog has all of {{items|length}} item{{items|pluralize}}.</p>
 {% endblock %}
 
 {% block content %}
