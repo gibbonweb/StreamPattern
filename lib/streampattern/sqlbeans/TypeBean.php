@@ -15,7 +15,7 @@ class TypeBean extends SQLBean {
     protected static $tableAlias = 'types';
     protected static $primaryKey = 'id';
     protected static $primaryKeyIsAutoIncrement = true;
-    protected static $fields = array('id', 'name', 'style');
+    protected static $fields = array('id', 'name', 'style_id');
 }
 
 ?>
