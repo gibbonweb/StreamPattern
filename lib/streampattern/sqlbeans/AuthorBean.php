@@ -1,8 +1,7 @@
 <?php
-
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * Copyright (c) 2011, Johannes Becker
+ * All rights reserved.
  */
 namespace streampattern\sqlbeans;
 use hydrogen\sqlbeans\SQLBean;
