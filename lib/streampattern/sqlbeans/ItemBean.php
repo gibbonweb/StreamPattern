@@ -7,6 +7,7 @@ namespace streampattern\sqlbeans;
 use hydrogen\database\Query;
 use hydrogen\sqlbeans\SQLBean;
 use streampattern\sqlbeans\AuthorBean;
+use streampattern\sqlbeans\TypeBean;
 /**
  * Description of ItemBean
  *
