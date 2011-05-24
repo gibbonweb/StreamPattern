@@ -5,6 +5,7 @@
  */
 namespace streampattern\sqlbeans;
 use hydrogen\sqlbeans\SQLBean;
+use hydrogen\database\Query;
 /**
  * Description of TypeBean
  *
@@ -15,7 +16,7 @@ class TypeBean extends SQLBean {
     protected static $tableAlias = 'types';
     protected static $primaryKey = 'id';
     protected static $primaryKeyIsAutoIncrement = true;
-    protected static $fields = array('id', 'name');
+    protected static $fields = array('id', 'name', 'style_id');
     protected static $beanMap = array(
         'author' => array(
             'joinType' => 'LEFT',
@@ -30,6 +31,11 @@ class TypeBean extends SQLBean {
      */
     protected function get_style() {
         $style = $this->getMapped('style');
+        if (false !== $style)
+            return $style;
+        $q = new Query("select");
+        $q->where("id = ?", $this->style_id);
+        $style = StyleBean::select($q);
         return $style !== false ? $style : false;
     }
 }
