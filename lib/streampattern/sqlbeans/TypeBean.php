@@ -22,6 +22,16 @@ class TypeBean extends SQLBean {
             'joinBean' => 'streampattern\sqlbeans\StyleBean',
             'foreignKey' => 'style_id')
     );
+    
+    
+    /**
+     * Returns the style of this item.
+     * @return type streampattern\sqlbeans\StyleBean
+     */
+    protected function get_style() {
+        $style = $this->getMapped('style');
+        return $style !== false ? $style : false;
+    }
 }
 
 ?>
