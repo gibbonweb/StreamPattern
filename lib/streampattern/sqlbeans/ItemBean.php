@@ -53,6 +53,7 @@ class ItemBean extends SQLBean {
     /**
      * Returns the parent of this item, or false if the item has no parent.
      * @return type streampattern\sqlbeans\ItemBean
+     * @todo this is absolutely untested and might not work...?
      */
     protected function get_parent() {
         if(!isset(ItemBean::$beanMap['parent'])) {
