@@ -9,7 +9,7 @@
 
 {% block content %}
 	{% for item in items %}
-        <div class="article">
+        <div class="item {{item.type.name}} size{{item.type.style.size}} {{item.type.style.class}}">
             <a href="{% url index.php/article/view item.id item.title|slugify %}" class="item-title">
                 {{item.title}}
             </a>

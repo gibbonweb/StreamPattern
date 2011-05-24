@@ -15,7 +15,7 @@ class StyleBean extends SQLBean {
     protected static $tableAlias = 'styles';
     protected static $primaryKey = 'id';
     protected static $primaryKeyIsAutoIncrement = true;
-    protected static $fields = array('id', 'class');
+    protected static $fields = array('id', 'size', 'class');
 }
 
 ?>
